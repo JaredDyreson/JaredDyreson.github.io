@@ -32,7 +32,7 @@ Make sure the builduser is present and removes any potential roadblocks the scri
 
 Configure the terminal to prettify zsh and vim. We also install our terminal emulator of choice, `urxvt`, along with the proper fonts.
 
-![image](assets/terminal_output)
+![Terminal Configured](https://jareddyreson.github.io/assets/terminal_output)
 
 ### desktop_manager
 
@@ -40,11 +40,11 @@ The main concern here is getting the graphical environment ready for login after
 
 Current Desktop
 
-![image](assets/current_desktop)
+![Desktop One](https://jareddyreson.github.io/assets/current_desktop)
 
 Desktop after installer
 
-![alt text](assets/installer_desktop)
+![Desktop Two](https://jareddyreson.github.io/assets/installer_desktop)
 
 
 ### theme_manager
