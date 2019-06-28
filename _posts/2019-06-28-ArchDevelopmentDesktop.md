@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Arch Linux Install Documentation (Desktop)
+category: Arch Linux Documentation
 ---
 
 ## User space Functions
