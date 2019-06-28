@@ -32,7 +32,7 @@ Make sure the builduser is present and removes any potential roadblocks the scri
 
 Configure the terminal to prettify zsh and vim. We also install our terminal emulator of choice, `urxvt`, along with the proper fonts.
 
-![alt text](assets/terminal_output)
+![image](assets/terminal_output)
 
 ### desktop_manager
 
@@ -40,7 +40,7 @@ The main concern here is getting the graphical environment ready for login after
 
 Current Desktop
 
-![alt text](assets/current_desktop)
+![image](assets/current_desktop)
 
 Desktop after installer
 
