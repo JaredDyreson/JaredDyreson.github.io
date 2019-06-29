@@ -4,6 +4,9 @@ title: Arch Linux Install Documentation (Desktop)
 category: Arch Linux Documentation
 ---
 
+This document covers all of the information needed to understand the desktop set up process for Arch Linux.
+
+
 ## User space Functions
 
 ### make_root
