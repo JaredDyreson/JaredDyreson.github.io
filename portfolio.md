@@ -2,9 +2,9 @@
 title: Portfolio Projects
 permalink: /portfolio/
 ---
-
 <div class="row">
-  {% for post in site.posts %}
+
+  {% for portfolio in site.portfolio %}
     {% if post.categories contains 'portfolio' %}
     <a href="{{ portfolio.url | prepend: site.baseurl }}">
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -18,6 +18,7 @@ permalink: /portfolio/
         </div>
       </div>
     </a>
+    {% endif %}
   {% endfor %}
 </div>
 
