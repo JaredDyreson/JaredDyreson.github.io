@@ -15,6 +15,3 @@ permalink: /something/
   {% endfor %}
 </div>
 
-<hr>
-{% endfor %}
-
