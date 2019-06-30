@@ -4,7 +4,7 @@ permalink: /portfolio/
 ---
 <div class="row">
 
-  {% for portfolio in site.portfolio %}
+  {% for post in site.posts %}
     {% if post.categories contains 'portfolio' %}
     <a href="{{ portfolio.url | prepend: site.baseurl }}">
       <div class="col-xs-12 col-sm-6 col-md-4">
