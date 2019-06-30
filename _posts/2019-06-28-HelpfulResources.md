@@ -1,7 +1,7 @@
 ---
 style: post
 title: Helpful Links and Resources
-category: workflow
+categories: blog
 ---
 
 Finding legitimately good information on Google can be difficult. This is a list of resources that have helped me better understand Unix and various different programming languages.

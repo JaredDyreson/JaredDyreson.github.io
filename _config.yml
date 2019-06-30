@@ -43,23 +43,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-collections:
-  portfolios:
-    output: true
-    permalink: /portfolio/:path/
-defaults:
-  - scope:
-      path: ""
-      type: "portfolios"
-    values:
-      layout: "portfolio"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-
+nav:
+  - name:           "home"
+    href:           "/"
+  - name:           "about"
+    href:           "/about"
+  - name:           "blog"
+    href:           "/blog"
