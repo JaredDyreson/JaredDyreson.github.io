@@ -1,6 +1,6 @@
 ---
 title: Page of something
-categories: something
+categories: portfolio
 ---
 
 Hello something
