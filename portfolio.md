@@ -6,14 +6,14 @@ permalink: /portfolio/
 
   {% for post in site.posts %}
     {% if post.categories contains 'portfolio' %}
-    <a href="{{ portfolio.url | prepend: site.baseurl }}">
+    <a href="{{ post.url | prepend: site.baseurl }}">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
-              {{ portfolio.title }}
+              {{ post.title }}
           </div>
           <div class="panel-body">
-            {{ portfolio.excerpt }}
+            {{ post.excerpt }}
           </div>
         </div>
       </div>
