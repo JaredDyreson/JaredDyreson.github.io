@@ -1,6 +1,6 @@
 ---
-title: Blog
-permalink: /blog/
+title: Portfolio Projects
+permalink: /portfolio/
 ---
 
 <div class="content list">
