@@ -1,20 +1,17 @@
 ---
-layout: page
-title: Portfolio Projects
-permalink: /portfolio/
+title: Blog
+permalink: /blog/
 ---
 
-<div class="posts">
-  {% for post in site.portfolio %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+<div class="content list">
+  {% for post in site.posts %}
+    {% if post.categories contains 'portfolio' %}
+    <div class="list-item">
+    <p class="list-post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
+        </p>
+    </div>
+    {% endif %}
   {% endfor %}
 </div>
+
