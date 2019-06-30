@@ -1,25 +1,14 @@
 name: Jared Dyreson
 description: Fullstack Developer 
 avatar: https://avatars1.githubusercontent.com/u/13741896?s=460&v=4
+title: One stop shop
 
 footer-links:
   dribbble:
-  email:
-  facebook:
-  flickr:
   github: JaredDyreson 
-  instagram:
   linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: 
   stackoverflow: users/11695624/jared-dyreson 
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
-
-disqus:
-google_analytics:
-url:
+url: https://jareddyreson.github.io
 baseurl: ""
 permalink: /:title/
 version: v1.2.0
@@ -43,6 +32,19 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "blog"
+    values:
+      layout:       "post"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
 nav:
   - name:           "home"
     href:           "/"
