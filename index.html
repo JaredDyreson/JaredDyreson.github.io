@@ -2,14 +2,17 @@
 layout: default
 ---
 
-<div class="portfolios">
-  {% for portfolio in site.portfolios %}
-  <article class="portfolio">
-    <h1><a href="{{ site.baseurl }}{{ portfolio.url }}">{{ portfolio.title }}</a><h1>
-    <div class="entry">
-      {{ portfolio.excerpt }}
-    </div>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-    <a href="{{ site.baseurl }}{{ portfolio.url }}" class="read-more">Read More</a>    </article>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
   {% endfor %}
 </div>
