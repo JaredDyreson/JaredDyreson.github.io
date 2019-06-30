@@ -9,6 +9,7 @@ permalink: /blog/
     <div class="list-item">
     <p class="list-post-title">
         <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
+	<p>{{ post.categories }}</p>
         </p>
     </div>
     {% endif %}
