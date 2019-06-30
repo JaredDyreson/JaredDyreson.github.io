@@ -54,3 +54,7 @@ nav:
     href:           "/blog"
   - name:	    "something"
     href:	    "/something"
+collections:
+  portfolio:
+    output: true
+    permalinlk: /_portfolio/:path/
