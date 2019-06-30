@@ -50,3 +50,5 @@ nav:
     href:           "/about"
   - name:           "blog"
     href:           "/blog"
+  - name:	    "something"
+    href:	    "/something"
