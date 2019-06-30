@@ -9,7 +9,7 @@ permalink: /blog/
   {% for post in site.posts %}
     {% if post.categories contains 'blog' %}
     <h2>Workflow</h2>
-    {% elif post.categories contains 'workflow' %}
+    {% elsif post.categories contains 'workflow' %}
     <div class="list-item">
     <p class="list-post-title">
         <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
