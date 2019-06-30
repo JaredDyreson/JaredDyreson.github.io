@@ -3,7 +3,7 @@ title: Portfolio Projects
 permalink: /portfolio/
 ---
 
-<div class="content list">
+<div class="row">
   {% for post in site.posts %}
     {% if post.categories contains 'portfolio' %}
     <a href="{{ portfolio.url | prepend: site.baseurl }}">
