@@ -44,6 +44,6 @@ exclude:
   - README.md
   - CNAME
 collections:
-	portfolio:
-		output: true
-		permalink: /portfolio/:path/
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
