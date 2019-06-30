@@ -3,8 +3,6 @@ title: Blog
 permalink: /blog/
 ---
 
-### **Blog posts**
-
 <div class="content list">
   {% for post in site.posts %}
     {% if post.categories contains 'blog' %}
