@@ -6,12 +6,18 @@ permalink: /portfolio/
 <div class="content list">
   {% for post in site.posts %}
     {% if post.categories contains 'portfolio' %}
-    <div class="list-item">
-    <p class="list-post-title">
-        <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
-        </p>
-    </div>
-    {% endif %}
+    <a href="{{ portfolio.url | prepend: site.baseurl }}">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              {{ portfolio.title }}
+          </div>
+          <div class="panel-body">
+            {{ portfolio.excerpt }}
+          </div>
+        </div>
+      </div>
+    </a>
   {% endfor %}
 </div>
 
