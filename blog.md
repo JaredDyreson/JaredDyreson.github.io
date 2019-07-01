@@ -4,7 +4,7 @@ permalink: /blog/
 ---
 <ul>
 {% for category in site.categories %}
-  <h2>{{ category | first }}</h2>
+  <li><b name="{{ category | first }}">{{ category | first }}</b>
     <ul>
       {% for post in category.last %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
