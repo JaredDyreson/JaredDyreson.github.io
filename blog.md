@@ -4,11 +4,15 @@ permalink: /blog/
 ---
 <ul>
 {% for category in site.categories %}
-  <b name="{{ category | first }}">{{ category | first }}</b>
-    <ul>
-      {% for post in category.last %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+	{% if category == "portfolio" %}
+		{% continue %}
+	{% else %}
+		<b name="{{ category | first }}">{{ category | first }}</b>
+		<ul>
+			{% for post in category.last %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 {% endfor %}
 </ul>
