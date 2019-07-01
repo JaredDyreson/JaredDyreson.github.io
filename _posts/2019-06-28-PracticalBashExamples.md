@@ -1,6 +1,6 @@
 ---
 title: Practical Shell Examples
-categories: blog
+categories: workflow
 ---
 
 Using the command line is an essential part of being a good computer scientist. Here I will show you some practical and everyday use cases.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Arch Linux Install Documentation (Desktop)
-categories: blog
+categories: linuxsysadmin
 ---
 
 This document covers all of the information needed to understand the desktop set up process for Arch Linux.
