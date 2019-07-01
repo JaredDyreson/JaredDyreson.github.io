@@ -4,7 +4,7 @@ permalink: /blog/
 ---
 <ul>
 {% for category in site.categories %}
-	{% if category == "portfolio" %}
+	{% if category contains "portfolio" %}
 		{% break %}
 	{% else %}
 		<b name="{{ category | first }}">{{ category | first }}</b>
