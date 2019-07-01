@@ -2,7 +2,7 @@
 title: Blog
 permalink: /blog/
 ---
-
+<ul>
 {% for category in site.categories %}
   <h2>{{ category | first }}</h2>
     <ul>
@@ -11,3 +11,4 @@ permalink: /blog/
       {% endfor %}
     </ul>
 {% endfor %}
+</ul>
