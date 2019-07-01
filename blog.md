@@ -3,18 +3,14 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="content list">
-  {% for post in site.posts %}
-    {% if post.categories contains 'blog' %}
-    {% for work in post.categories %}
-    <p>{{ post.categories }}</p>
+<ul>
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for post in category.last %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-    <div class="list-item">
-    <p class="list-post-title">
-        <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
-        </p>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
-
+    </ul>
+  </li>
+{% endfor %}
+</ul>
