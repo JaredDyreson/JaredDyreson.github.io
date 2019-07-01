@@ -8,7 +8,7 @@ permalink: /portfolio/
     {% if post.categories contains 'portfolio' %}
     <div class="list-item">
     <p class="list-post-title">
-        <img src="{{ post.featured_image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+        <img src="{{ post.featured_img | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
         <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a> (<small>{{post.date | date: "%m/%d/%y" }}</small>)
         </p>
     </div>
