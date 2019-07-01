@@ -8,7 +8,7 @@ Hello, my name is Jared Dyreson and I am currently attending California State Un
 
 ### Resume
 
-You can find my resume [here](https://google.com)
+You can find my resume [here](https://github.com/JaredDyreson/JaredDyreson.github.io/assets/Resume.pdf)
 
 ### Contact me
 
