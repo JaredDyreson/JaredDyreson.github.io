@@ -7,11 +7,7 @@ permalink: /blog/
   <h2>{{ category | first }}</h2>
     <ul>
     {% for post in category.last %}
-      {% if post == 'portfolio' %}
-        {% continue %}
-      {% else %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
     </ul>
 {% endfor %}
