@@ -3,7 +3,6 @@ title: Blog
 permalink: /blog/
 ---
 
-<ul>
 {% for category in site.categories %}
   <li><a name="{{ category | first }}">{{ category | first }}</a>
     <ul>
@@ -13,4 +12,3 @@ permalink: /blog/
     </ul>
   </li>
 {% endfor %}
-</ul>
