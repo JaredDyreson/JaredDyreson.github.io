@@ -10,7 +10,7 @@ permalink: /blog/
 		<b name="{{ category | first }}">{{ category | first }}</b>
 		<ul>
 			{% for post in category.last %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a><(<small>{{post.date | date: "%m/%d/%y" }}</small>)/li>
+				<li><a href="{{ post.url }}">{{ post.title }}</a>(<small>{{post.date | date: "%m/%d/%y" }}</small>)</li>
 			{% endfor %}
 		</ul>
 	{% endif %}
