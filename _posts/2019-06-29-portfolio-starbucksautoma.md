@@ -29,7 +29,7 @@ To make the process easier in driver code, most of the heavy lifting is handled 
 We are only needed to instantiate one of these objects at a time as it can reuse the credentials generated in `gen_credentials`, allowing for a cleaner code base.
 
 
-#### __init__(self)
+#### __init__
 
 We get our credentials and service attribute which will allow for communication between the program and the Google Calendar API.
 
@@ -62,4 +62,30 @@ This function accepts an event in JSON format with the following structure:
 ```
 Start and end time **must** be in this date format `%Y-%m-%dT%H:%M:%S-OFFSET`, where the offset is the amount of hours different from UTC. 
 For example, Los Angeles has an offset of seven hours so it would look something like this: `%Y-%m-%dT%H:%M:%S-07:00`.
+We make a `time_struct` object to get human readable dates and to check if the event has already been inputted. This checking is done using the `get_free_busy` function. We check if the event is *not* in the calendar to proceed. We get a message telling us if it was added or has already been added.
+
+#### get_events
+
+Return a list of the next fifty events we have access to.
+
+#### gen_time_struct
+
+Check if any part of the incoming event JSON data is `None` then proceed to load up the proper attributes of the struct.
+Lastly return the object.
+
+#### get_free_busy
+
+**False:** you are not busy
+**True:** you are busy
+
+The way that freebusy request works is that you cannot just specify the start and end time of the event
+Use the start and add an hour to the end time, it should work from there.
+
+We send a request giving the start (timeMin), end (timeMax), time zone, and the proper calendar (primary).
+
+Parsing the request allows us to check if we are busy.
+The list of events retrieved length can be an easy indication and it's length being zero means we are free.
+The second method is by looping through the list and checking if start and end time provided match an element in the list.
+If it finds something, then we return `True`, else we return `False`.
+
 
