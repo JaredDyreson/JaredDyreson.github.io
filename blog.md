@@ -4,7 +4,7 @@ permalink: /blog/
 ---
 
 {% for category in site.categories %}
-  <li><h2>{{ category | first }}</h2>
+  <h2>{{ category | first }}</h2>
     <ul>
     {% for post in category.last %}
       {% if post == 'portfolio' %}
@@ -14,5 +14,4 @@ permalink: /blog/
       {% endif %}
     {% endfor %}
     </ul>
-  </li>
 {% endfor %}
