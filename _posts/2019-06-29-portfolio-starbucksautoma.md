@@ -4,7 +4,7 @@ categories: portfolio
 featured_img: /assets/portfolios/starbucks_automa
 ---
 
-See the project [here](https://google.com/)
+See the project [here](https://github.com/JaredDyreson/starbucks_automa_production)
 
 # Introduction
 
