@@ -31,7 +31,7 @@ A C-style array with an templated type to allow for any data type to be used.
 
 ## Functions/Methods
 
-**NOTE:** all functions are defined outside of the class body. This is referred to as declaring functions `inline` and it uses the `scope resolution operator(::)`. That operator is also used in `namespace` usage such as `std::string`, where the string class belongs to the `namespace` std. `vector::<FUNCTION CALLED>` is telling the compiler that FUNCTION CALLED is apart of the `vector` class.
+**NOTE:** all functions are defined outside of the class body. This is referred to as declaring functions `inline` and it uses the `scope resolution operator(::)`. That operator is also used in times where `namespace` is important. For example, `std::string` where the string class belongs to the `namespace` std. `vector::<FUNCTION CALLED>` is telling the compiler that FUNCTION CALLED is apart of the `vector` class.
 
 ### Default Constructor
 
