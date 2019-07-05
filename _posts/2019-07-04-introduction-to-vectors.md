@@ -38,6 +38,11 @@ A C-style array with an templated type to allow for any data type to be used.
 ```cpp
 vector() : vector(15){}
 ```
+Example usage:
+
+```cpp
+learning::vector<int> a;
+```
 
 This constructor is a wrapper for the parameterized constructor. We are giving it a default size to load if no size is explicitly given; `15` in this case.
 
@@ -53,8 +58,39 @@ Since there is nothing inside the vector at initialization, we give it the size 
 Then, we pass the capacity directly to the variable `capacity_`. 
 Lastly, we dynamically allocate an array on the heap and assigning the pointer returned by that allocation directly to `data_`.
 
+Example usage: 
+
+```cpp
+learning::vector<int> a(100);
+```
+
+### Copy Constructor
+
+```cpp
+vector& operator=(const vector<T> &v){
+	if (this != &other) { copy(other); }
+	return *this;
+}
+```
+
+The copy constructor relies on operator overloading for it to function. 
+This is when an operator (`+`, `-`, `=`, `==`, etc) is redefined to serve a specific purpose in a class instance. 
+You can overload the same operator in two distinct classes and they will function independent of one another.
+Please refer to the `External Links` section for more information about operator overloading.
+We first check if both instances of the vector class are not the same.
+If they are distinct vectors, we can migrate the contents of variable on the **right** side of the equal sign into the variable on the **left** side of the equal sign.
+Else, we return the object on the **left** side of the equal sign, telling the compiler that **left** is equal to itself.
+
+Example usage:
+
+```cpp
+learning::vector a(100);
+a.push_back(5); // content is 5
+learning::vector b(100); // empty
+b = a; // b will now have the contents of 5 aswell
+```
 
 # External Links
 
 - [Microsoft C++ Constructor Documentation](https://docs.microsoft.com/en-us/cpp/cpp/constructors-cpp?view=vs-2019)
-
+- [TutorialsPoint Operator Overloading Section](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
