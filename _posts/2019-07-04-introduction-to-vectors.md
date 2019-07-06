@@ -4,6 +4,13 @@ title:	Introduction to Vectors
 categories: Data Structures Crash Course
 ---
 
+# TODO
+
+- != , ==
+	- Along with example code 
+- resize function
+	- Along with example code
+
 # Vectors
 
 `std::vector` is one of many data containers in the C++ Standard Library. 
@@ -42,6 +49,25 @@ Two versions are declared, one for making direct edits to `data_` (const) and on
 
 ### !=
 
+### `<<`
+
+```cpp
+std::ostream& operator<<(std::ostream& os, const vector<T>& iv) {
+	for (auto val : iv) { os << val << " "; }
+	return os;
+}
+```
+We can directly call an `std::ostream` operator directly on the `learning::vector` class.
+This includes and is not limited to:
+
+- `std::cout`
+- `std::ofstream`
+- `std::ifstream`
+
+This allows for printing out the content of the `data_` member variable to the console or files.
+Note that we need to declare it with the `friend` keyword which allows the function direct access to private data members.
+Also, we are passing in the `learning::vector` object as `const` which tells the `std::ostream` operator *not* to modify or make a copy in the function body.
+Please refer to `External Links` for a more in depth explanation.
 
 ## Functions/Methods
 
@@ -52,13 +78,14 @@ Two versions are declared, one for making direct edits to `data_` (const) and on
 ```cpp
 vector() : vector(15){}
 ```
+
+This constructor is a wrapper for the parameterized constructor. We are giving it a default size to load if no size is explicitly given; `15` in this case.
+
 Example usage:
 
 ```cpp
 learning::vector<int> a;
 ```
-
-This constructor is a wrapper for the parameterized constructor. We are giving it a default size to load if no size is explicitly given; `15` in this case.
 
 ### Parameterized Constructor
 
@@ -115,25 +142,6 @@ vector<T>::~vector(){
 
 Delete the contents of the `data_` array and set it's pointer to NULL preventing a dangling pointer.
 
-### Overloaded std::ostream operator
-
-```cpp
-std::ostream& operator<<(std::ostream& os, const vector<T>& iv) {
-	for (auto val : iv) { os << val << " "; }
-	return os;
-}
-```
-We can directly call an `std::ostream` operator directly on the `learning::vector` class.
-This includes and is not limited to:
-
-- `std::cout`
-- `std::ofstream`
-- `std::ifstream`
-
-This allows for printing out the content of the `data_` member variable to the console or files.
-Note that we need to declare it with the `friend` keyword which allows the function direct access to private data members.
-Also, we are passing in the `learning::vector` object as `const` which tells the `std::ostream` operator *not* to modify or make a copy in the function body.
-Please refer to `External Links` for a more in depth explanation.
 
 ### copy
 
