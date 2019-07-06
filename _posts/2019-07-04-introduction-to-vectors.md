@@ -6,10 +6,20 @@ categories: Data Structures Crash Course
 
 # TODO
 
-- != , ==
+- != , ==, []
 	- Along with example code 
 - resize function
 	- Along with example code
+- forward declaration for operators
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
+- Please cross reference vector.h for things that are missing from this documentation
 
 # Vectors
 
@@ -264,6 +274,12 @@ void vector<T>::push_back(T val){
 ```
 Append one more element to the array.
 If the size exceeds the capacity, we need to call `resize` to expand the array to make room for the data.
+
+### pop_back
+
+```cpp
+```
+
 
 # External Links
 
