@@ -92,6 +92,9 @@ If it finds something, then we return `True`, else we return `False`.
 ## driver_utils
 
 Here we are using the Firefox driver gain access to certain elements to further the program flow.
+The aim here was to make the code as agnostic from the driver code as possible.
+Previous iterations has this external "library" directly integrated in main, which cluttered it and was hard to read.
+Also, driver instantiations are not allowed to be returned and subsequently not able to be used in one over arching class.
 
 ### findUserName
 
