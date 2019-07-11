@@ -113,8 +113,9 @@ driver_utils.findUserName(driver, parser).click()
 
 ### findTwoFAQuestion
 
-![Find Two Factor Authentication](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authenitication.png)
+![Find Two Factor Authentication](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authentication.png)
+
 
 ### findFinalPassword
 
-![Find Password Fields](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authenitication.png)
+![Find Password Fields](https://jareddyreson.github.io/assets/portfolios/starbucks/password_landing_page.png)
