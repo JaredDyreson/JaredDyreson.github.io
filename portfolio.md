@@ -5,7 +5,7 @@ permalink: /portfolio/
 <div class="row">
 
   {% for post in site.posts %}
-    {% if post.categories contains 'portfolio' %}
+    {% if post.categories contains 'Portfolio' %}
     <div class="list-item">
     <p class="list-post-title">
         <img src="{{ post.featured_img | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
