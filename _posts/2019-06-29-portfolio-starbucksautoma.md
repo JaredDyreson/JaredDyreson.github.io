@@ -76,6 +76,7 @@ Lastly return the object.
 #### get_free_busy
 
 **False:** you are not busy
+
 **True:** you are busy
 
 The way that freebusy request works is that you cannot just specify the start and end time of the event
@@ -88,4 +89,16 @@ The list of events retrieved length can be an easy indication and it's length be
 The second method is by looping through the list and checking if start and end time provided match an element in the list.
 If it finds something, then we return `True`, else we return `False`.
 
+## driver_utils
 
+Here we are using the Firefox driver gain access to certain elements to further the program flow.
+
+### findUserName
+
+This page can be temperamental.
+We need to add a `try-catch` block to check if text input box surrounded in black is present.
+If our element has not loaded, we wait four seconds to hopefully allow time for the element to render.
+Notice the method chaining in the `try-catch` block; we are able to directly use our `JSONParser` class directly in the `send_keys` function.
+
+
+![Find Username Field](https://jareddyreson.github.io/assets/starbucks/first_landing_page)
