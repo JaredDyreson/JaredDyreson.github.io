@@ -1,5 +1,5 @@
 ---
-title: Frustrations and eventual success of starbucksAutoma
+title: Frustrations of starbucksAutoma
 categories: project_fun
 ---
 
