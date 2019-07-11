@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: data_structures
+categories: dataStructures
 ---
 
 Vectors
