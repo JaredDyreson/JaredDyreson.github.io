@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: Data Structures Crash Course
+categories: [Data Structures Crash Course]
 ---
 
 # TODO
@@ -11,14 +11,6 @@ categories: Data Structures Crash Course
 - resize function
 	- Along with example code
 - forward declaration for operators
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
-- Please cross reference vector.h for things that are missing from this documentation
 - Please cross reference vector.h for things that are missing from this documentation
 
 # Vectors
@@ -52,12 +44,43 @@ A C-style array with an templated type to allow for any data type to be used.
 
 ### []
 
+```cpp
+T vector<T>::operator[](size_t i) const { return data_[i]; }
+```
+
+```cpp
+T& vector<T>::operator[](size_t i) { return data_[i]; }
+```
+
 Access elements directly like C-style arrays.
-Two versions are declared, one for making direct edits to `data_` (const) and one to retrieve members from `data_` (non const).
+Two versions are declared, one for making direct edits to `data_` (non const) and one to retrieve members from `data_` (const).
 
 ### == 
 
+```cpp
+bool operator==(const vector<T>& a, const vector<T>& b){
+	if(a.size() != b.size() || a.capacity() != b.capacity()) { return false; }
+	for(size_t i = 0; i < a.capacity(); ++i){
+		if(a[i] != b[i]) { return false; }
+	}
+	return true;
+}
+
+```
+
+We first check if the `size_` or `capacity_` variables are not the same, returning false if either condition is fulfilled.
+After that check, we loop through the `data_` member of both `learning::vector` class objects.
+Once an element that does not match is found, we immediately return false.
+Lastly, we return true if all other conditions are evaluated.
+
 ### !=
+
+```cpp
+bool operator!=(const vector<T>& a, const vector<T>& b) { return !(a==b); }
+```
+
+Calling the `==` operator will allow us to get a true or false response.
+This response is then inverted and we have if it is *not* equal.
 
 ### `<<`
 
@@ -184,7 +207,7 @@ std::copy(a, b, c);
 ### size
 
 ```cpp
-size_t vector<T>::size(){ return size_; }
+size_t vector<T>::size() const{ return size_; }
 ```
 
 Return the current size of the vector, which is the number of elements currently being held, not the entire capacity. `size_t` is the return type.
@@ -192,7 +215,7 @@ Return the current size of the vector, which is the number of elements currently
 ### capacity
 
 ```cpp
-size_t vector<T>::capacity() { return capacity_; }
+size_t vector<T>::capacity() const { return capacity_; }
 ```
 
 Return the capacity capability of the vector. `size_t` is the return type.
@@ -278,7 +301,71 @@ If the size exceeds the capacity, we need to call `resize` to expand the array t
 ### pop_back
 
 ```cpp
+void vector<T>::pop_back(){
+	if(capacity_ == 0) { throw new std::invalid_argument("buffer underflow"); }
+	else if(capacity_ <= (size_/2)){ resize(size_/2); } // reduce size
+	data_[size_--] = T();
+	
+}
 ```
+
+When capacity is zero we do not remove elements to prevent a segmentation fault.
+We can reduce the size to save on memory if space is not being used.
+Lastly, we set the last element to an empty instantiation of the data we have in our `data_` element.
+
+### resize
+
+```cpp
+void learning::vector<T>::resize(size_t newsize) {
+  if (capacity > newsize) { throw new std::invalid_argument("new buffer size too small for data"); }
+  T* newdata = new T[newsize];
+  std::copy(data_, data_ + size_, newdata);
+  size_ = newsize;
+  delete [] data_;
+  data_ = newdata;
+}
+```
+
+This function resizes the dynamically allocated `data_` member.
+It checks if the newly presented size is less than the preexisting capacity and will fail if that condition returns true.
+We then allocate a new array on the heap with the new size and we copy the old content from the previous `data_` element.
+Our `size_` member is updated and we delete, the old `data_` member variable.
+Lastly, the newly created array is assigned to the `data_` member.
+
+
+### vector_test
+
+```cpp
+void vector_test(){
+	learning::vector<float> iv;
+
+	for (size_t i = 0; i < iv.size(); ++i) { iv.push_back(0.5 + 2 * i); }
+	std::cout << "iv is: " << &iv << "   " << iv << "\n";
+	assert(iv[0] == 0.5);
+	assert(iv[iv.capacity() - 1] == 2 * (iv.size() - 1) + 0.5);
+
+	learning::vector<float> iu(iv);
+	std::cout << "after copy c'tor...\niu is: " << &iu << "   " << iu << "\n";
+	assert(iv == iu);
+
+	learning::vector<float> it;
+	it = iu;
+	std::cout << "after operator=...\nit is: " << &iu << "   " << iu << "\n";
+	assert(it == iu);
+
+	iv.push_back(90.9);
+	iv.push_back(900.9);
+	iv.push_back(90000.9);
+	std::cout << "after adding more data, iv is now..." << iv << "\n";
+
+	while (iv.size() > 5) {
+	iv.pop_back();
+	std::cout << "iv is now..." << iv << "\n";
+	}
+
+}
+```
+
 
 
 # External Links
