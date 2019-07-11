@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: [Data Structures Crash Course]
+categories: [DataStructureCrashCourse]
 ---
 
 # TODO
