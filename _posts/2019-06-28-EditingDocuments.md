@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing Documents
-categories: workflow
+categories: Workflow
 ---
 
 A shameless ramble about my love for vim and the efficiency aspect of it.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: datastructs
+categories: [Data Structure Crash Course in C++]
 ---
 
 ![Vectors](https://miro.medium.com/max/700/0*I8aevS6mp9CC5axo.)

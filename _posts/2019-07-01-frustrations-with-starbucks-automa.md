@@ -1,6 +1,6 @@
 ---
 title: Frustrations of starbucksAutoma
-categories: project_fun
+categories: [Project Fun]
 ---
 
 ![LOGO](http://wuog.org/wp-content/uploads/2015/11/StarBucks.jpg)
