@@ -17,7 +17,9 @@ Here, you will explore the inner workings of how the `std::vector` is built at a
 The following methods and attributes were written to simulate their functionality but are nowhere near as efficient as the STL container used in productions.
 To read that code, please refer to this [link](https://code.woboq.org/llvm/libcxx/include/vector.html) to the official source code.
 
-**NOTE:** the following code which been adapted that was originally written by William McCarthy of California State University Fullerton. I take no credit for the code but do take credit for the documentation provided here on forward. All rights reserved.
+**NOTE:** the following code which been adapted that was originally written by William McCarthy of California State University Fullerton. I take no credit for the code but do take credit for the documentation provided here on forward. All rights reserved. 
+Link to the original source code [here](https://github.com/JaredDyreson/Backed-Development/blob/master/c%2B%2B_stl_data_structures/vectors/vector_.h) and link to modified code [here](https://github.com/JaredDyreson/Backed-Development/blob/master/c%2B%2B_stl_data_structures/vectors/vector_h_attempt.hpp).
+Both source files are nearly identical, just the second one is my attempt without looking at the first.
 
 ## Attributes
 
