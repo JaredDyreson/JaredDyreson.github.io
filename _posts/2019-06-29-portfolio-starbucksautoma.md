@@ -96,6 +96,11 @@ The aim here was to make the code as agnostic from the driver code as possible.
 Previous iterations has this external "library" directly integrated in main, which cluttered it and was hard to read.
 Also, driver instantiations are not allowed to be returned and subsequently not able to be used in one over arching class.
 
+### waitForPageToLoad
+
+Simple one line function to tell the webdriver to wait until the title has changed to a predefined value.
+This is useful to see if the page has fully loaded or not.
+
 ### findUserName
 
 This page can be temperamental.
@@ -113,9 +118,34 @@ driver_utils.findUserName(driver, parser).click()
 
 ### findTwoFAQuestion
 
+The text surrounded in red is an example of a two factor authentication question.
+These questions are hard-coded in this method and does not apply to every user.
+Our answers are stored in the `config.json` file.
+
+```json
+{
+  "username": "PARTNER_ID",
+  "password": "PASSWORD",
+  "hobby": "TWO FACTOR AUTHENTICATION ANSWER 1",
+  "hometown": "TWO FACTOR AUTHENTICATION ANSWER 2"
+}
+```
+`hobby` and `hometown` are predefined answers to questions seen in this method and are sent to the box surrounded in blue.
+
+Method returns the box surrounded in black which allows us to click the button and click it from driver code like so:
+
+```python
+driver_utils.findTwoFAQuestion(driver, parser).click()
+```
+
 <div style="text-align:center"><img src="https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authentication.png" /></div>
 
 ### findFinalPassword
 
+`findFinalPassword` is more simple than the rest.
+We only need to find the password text field and send the password (surrounded in red).
+The box surrounded in black would normally be filled in but has been edited for confidentiality purposes.
+
 <div style="text-align:center"><img src="https://jareddyreson.github.io/assets/portfolios/starbucks/password_landing_page.png" /></div>
+
 
