@@ -109,3 +109,12 @@ driver_utils.findUserName(driver, parser).click()
 ```
 
 ![Find Username Field](https://jareddyreson.github.io/assets/portfolios/starbucks/first_landing_page.png)
+
+
+### findTwoFAQuestion
+
+![Find Two Factor Authentication](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authenitication.png)
+
+### findFinalPassword
+
+![Find Password Fields](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authenitication.png)
