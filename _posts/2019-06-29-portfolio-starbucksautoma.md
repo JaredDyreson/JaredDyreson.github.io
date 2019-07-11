@@ -99,6 +99,10 @@ This page can be temperamental.
 We need to add a `try-catch` block to check if text input box surrounded in black is present.
 If our element has not loaded, we wait four seconds to hopefully allow time for the element to render.
 Notice the method chaining in the `try-catch` block; we are able to directly use our `JSONParser` class directly in the `send_keys` function.
+We then return the element in black which allows us call this function and click it in one line as so;
 
+```python
+driver_utils.findUserName(driver, parser).click()
+```
 
 ![Find Username Field](https://jareddyreson.github.io/assets/portfolios/starbucks/first_landing_page.png)
