@@ -108,14 +108,14 @@ We then return the element in black which allows us call this function and click
 driver_utils.findUserName(driver, parser).click()
 ```
 
-![Find Username Field](https://jareddyreson.github.io/assets/portfolios/starbucks/first_landing_page.png)
 
+<div style="text-align:center"><img src="https://jareddyreson.github.io/assets/portfolios/starbucks/first_landing_page.png" /></div>
 
 ### findTwoFAQuestion
 
-![Find Two Factor Authentication](https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authentication.png)
-
+<div style="text-align:center"><img src="https://jareddyreson.github.io/assets/portfolios/starbucks/two_factor_authentication.png" /></div>
 
 ### findFinalPassword
 
-![Find Password Fields](https://jareddyreson.github.io/assets/portfolios/starbucks/password_landing_page.png)
+<div style="text-align:center"><img src="https://jareddyreson.github.io/assets/portfolios/starbucks/password_landing_page.png" /></div>
+
