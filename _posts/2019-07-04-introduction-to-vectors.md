@@ -4,7 +4,7 @@ title:	Introduction to Vectors
 categories: datastructs
 ---
 
-Vectors
+![Vectors](https://miro.medium.com/max/700/0*I8aevS6mp9CC5axo.)
 
 # Vectors
 
