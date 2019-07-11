@@ -1,17 +1,10 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: [DataStructureCrashCourse]
+categories: data_structures
 ---
 
-# TODO
-
-- != , ==, []
-	- Along with example code 
-- resize function
-	- Along with example code
-- forward declaration for operators
-- Please cross reference vector.h for things that are missing from this documentation
+Vectors
 
 # Vectors
 
