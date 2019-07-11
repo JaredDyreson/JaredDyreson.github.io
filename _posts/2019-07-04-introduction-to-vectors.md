@@ -1,7 +1,7 @@
 ---
 layout: post
 title:	Introduction to Vectors
-categories: linuxsysadmin
+categories: datastructs
 ---
 
 Vectors
