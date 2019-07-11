@@ -101,4 +101,4 @@ If our element has not loaded, we wait four seconds to hopefully allow time for 
 Notice the method chaining in the `try-catch` block; we are able to directly use our `JSONParser` class directly in the `send_keys` function.
 
 
-![Find Username Field](https://jareddyreson.github.io/assets/starbucks/first_landing_page.png)
+![Find Username Field](https://jareddyreson.github.io/assets/portfolios/starbucks/first_landing_page.png)
